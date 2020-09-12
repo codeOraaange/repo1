@@ -1,0 +1,47 @@
+<html>
+<head>
+	<script>
+	function ok(){
+		var a=document.getElementById("kar");
+		var b=document.getElementById("j").value;
+		var c=parseInt(b);
+		for(var i=1;i<=c;i++){
+			for(var k=1;k<=c;k++){
+				if(i==1 || i==c || k==1 || k==c){	
+					cetak.innerHTML+=a.value;
+				}else{
+					cetak.innerHTML+="&nbsp;";
+				}
+			}cetak.innerHTML+="<br>"
+		}
+	}
+	function ref(){
+		window.location.reload();
+	}
+	</script>
+</head>
+<body style="font-family: Consolas;">
+membuat segiempat
+	<table>
+		<tr>
+			<td>karakter</td>
+			<td><input type="text" id="kar"/></td>
+		</tr>
+		<tr>
+			<td>jumlah</td>
+			<td><input type="text" id="j"/></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button onclick="ok()">ok</button></td>
+		</tr>
+			<td></td>
+			<td><button onclick="ref()">reset</button></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><label id="cetak" style="letter-spacing:10px;"></label></td>
+		</tr>
+	</table>
+</body>
+</html>
